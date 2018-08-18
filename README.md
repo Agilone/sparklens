@@ -94,6 +94,12 @@ Once you have the Sparklens jar available, add the following options to your spa
 ```
 You could also add this to your cluster's **spark-defaults.conf** so that it is automatically available for all applications.
 
+### Working with Hive on Spark ###
+Set the following spark properties
+```
+set spark.driver.extraClassPath=/<path-to>/sparklens_2.10-0.1.0.jar;
+set spark.extraListeners=com.qubole.sparklens.QuboleJobListener;
+```
 
 ### Working with Notebooks ###
 It is possible to use Sparklens in your development cycle using Notebooks. Sparklens keeps lots of information in-memory. 
